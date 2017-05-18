@@ -31,30 +31,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn.setOnClickListener(this);
 
         // 2 번형태로 구현 - 아래에 구현된 리스너를 등록해준다.
-//        btn.setOnClickListener(listener);
+        btn.setOnClickListener(listener);
 
         // 3 번형태로 구현
-//        btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                tv.setText("안녕 안드로이드!!!");
-//            }
-//        });
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tv.setText("안녕 안드로이드!!!");
+            }
+        });
     }
-
     // 1번 형태
     @Override
     public void onClick(View v) {
         tv.setText("안녕 안드로이드!!!");
     }
-
-    // 2번형태로 구현
-//    View.OnClickListener listener = new View.OnClickListener() {
-//        @Override
-//        public void onClick(View v) {
-//            tv.setText("안녕 안드로이드!!!");
-//        }
-//    };
+    // 2번 형태
+    View.OnClickListener listener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            tv.setText("안녕 안드로이드!!!");
+        }
+    };
 
 }
